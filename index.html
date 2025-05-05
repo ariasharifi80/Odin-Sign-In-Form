@@ -9,30 +9,64 @@
 <body>
     
    
- <div class="container">
-    <section class="header"> <div id="head-txt"> <p id="prewrap">
-        This is not a real service! you knw you need something <br>
-         like this to realize your Deepest <br>
-          dreams sign up now to get started   <br>
-          you <em>know</em> it.
-    </p> </div> </section>
-    <section class="img-logo">
-        
-       <div class="logo-badge">
-         <img src="assets/odin-lined.png" alt="The All Father" > <span>Odin Project</span>
-       </div>
-    </section>
+  <div class="container">
 
-    <section class="form-sect">
-      <h1>Lets Do This</h1>
-      <form action="" method="get">
-        <div class="form-row">
-          <label for="Fname">First Name:</label>
-          <input type="text" name="name" id="Fname"  placeholder="Your First Name">
-        </div>
-      </form>
+    <!-- Left Image Section -->
+    <section class="img-logo">
+      <div class="logo-badge">
+        <img src="assets/odin-lined.png" alt="The All Father">
+        <span>Odin Project</span>
+      </div>
     </section>
-</div>
+  
+    <!-- Right Content -->
+    <div class="right-content">
+      
+      <section class="header">
+        <div id="head-txt">
+          <p id="prewrap">
+            This is not a real service! you know you need something <br>
+            like this to realize your deepest <br>
+            dreams. Sign up now to get started. <br>
+            You <em>know</em> it.
+          </p>
+        </div>
+      </section>
+  
+      <section class="form-sect">
+        <form>
+          <h1>Let's Do This</h1>
+          <div class="form-row">
+            <label for="Fname">First Name:</label>
+            <input type="text" name="name" id="Fname" placeholder="Your First Name">
+
+            <label for="mail">Email : <span aria-label="required">*</span></label>
+            <input type="email" name="email" id="mail" placeholder="Your Email Address" required>
+            <label for="password">password: <span aria-label="required">*</span></label>
+            <input type="password" name="password" id="password" required minlength="6">
+           
+           </div>
+           <div  class="form-row">
+            <label for="Lname">Last Name:</label>
+            <input type="text" name="name" id="Lname" placeholder="Your Last Name">
+             
+            <label for="phone">Phone Number:</label>
+            <input type="tel" name="phone" id="phone" pattern="^09\d{9}$" placeholder="Your phone number">
+
+            <label for="passconfirm">Confirm Password: <span aria-label="required">*</span></label>
+            <input type="password" name="confirm" id="passconfirm" required oninput="this.setCustomValidity(this.value !== password.value ? 'Passwords do not match' : '')">
+          </div>
+
+           
+            
+          
+        </form>
+      </section>
+  
+    </div>
+  
+  </div>
+  
 
 </body>
 </html>

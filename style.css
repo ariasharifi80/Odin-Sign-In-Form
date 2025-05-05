@@ -1,113 +1,157 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
 @font-face {
-    font-family: 'norse-bold';
-    src: url('assets/Norse-Bold.woff2') format('woff2');
+  font-family: 'norse-bold';
+  src: url('assets/Norse-Bold.woff2') format('woff2');
 }
 
-body{
-    font-family: 'norse-bold',sans-serif;
-    font-size: 16px;
-
-    
-}
-html, body { height: 100%; 
+body {
+  font-family: 'norse-bold', sans-serif;
+  font-size: 16px;
+  height: 100%;
 }
 
-.container{
+html {
+  height: 100%;
+}
+
+.container {
   display: flex;
-    height: 100vh;
+  height: 100vh;
 }
 
-
-.header{
-   
-   position: absolute;
-   top: 0;
-   right: 0;
-   
-   
-   background-color: rgb(207, 193, 193);
-    font-size: 3em;
-    justify-content: flex-start;
-    align-items: center;
-    width: 70%;
-    height: 40%;
-   padding-left: 60px;
-    padding-right: 30px;
-    padding-top: 100px;
-    
-   
-
-}
-
-.head-txt{
-    word-spacing: 10px;
-}
-
-#pre-wrap{
-    white-space: pre-wrap;
-   
-}
-
-
+/* --- Left side image section --- */
 .img-logo {
-    position: relative;    /* establish a positioning context */
-    float: left;
-    width: 30%;
-    height: 100vh;
-    background: url(assets/halie-west-25xggax4bSA-unsplash.jpg)
-                no-repeat center center;
-    background-size: cover;
-  }
+  width: 30%;
+  background: url(assets/halie-west-25xggax4bSA-unsplash.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Logo badge overlay */
+.logo-badge {
+  position: absolute;
+  top: 200px;
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.logo-badge img {
+  width: 150px;
+  height: auto;
+  margin-right: 0.75rem;
+  margin-left: 2rem;
+}
+
+.logo-badge span {
+  font-size: 2.5rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* --- Right side content --- */
+.right-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Header section */
+.header {
+  background-color: rgb(207, 193, 193);
+  font-size: 2em;
+  padding: 60px;
+}
+
+#prewrap {
+  white-space: pre-wrap;
+}
+
+/* Form section */
+.form-sect {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem;
+}
+
+form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
   
-  /* the little badge */
-  .img-logo .logo-badge {
-    position: absolute;           /* pull out of normal flow */
-    top: 200px;                    /* adjust vertical offset */
-                       /* adjust horizontal offset */
-    display: inline-flex;         /* shrinkwrap to contents */
-    align-items: center;          /* vertically center img + text */
-    background-color: rgba(0,0,0,0.5);
-    padding: 0.5rem 1rem;         /* space around the logo+text */
-    border-radius: 4px;           /* soften the corners */
-    z-index: 2;                   /* sit above the background */
-    width: 100%;
+  gap: 3rem;
+}
 
-  }
+form h1 {
   
-  /* optional: space between logo and text */
-  .img-logo .logo-badge img {
-    width: 150px;
-    height: auto;
-    margin-right: 0.75rem;
-    margin-left: 2rem;
-  }
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction:column;
   
-  .img-logo .logo-badge span {
-    font-size: 2.5rem;    /* or whatever fits */
-    color: #fff;
-    white-space: nowrap;  /* prevent the text wrapping onto two lines */
-  }
+  gap: 10px;
+  padding-top: 50px;
+  
+}
 
-  .form-sect{
-       position: relative;
-       z-index: 3;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       height: 60%;
-       border: 1px dotted black;
-       
-       
-       
-   }
+input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.form-row label {
+  
+  padding-top: 10px;
+  margin-left: 10px;
+}
 
-  .form-sect h1{
-    position: absolute;
-   
-  }
+.form-row input {
+  border-radius: 5px;
+}
 
+input[type='tel']{
+  height: 35px;
+}
+input[type='email']{
+  height: 35px;
+}
+input[type='password']{
+  height: 35px;
+}
+
+input[type='email']:focus,
+input[type='tel']:focus,
+input[type='text']:focus,
+input[type='password']:focus
+{
+border-color: rgb(0, 81, 255);
+outline: none;
+box-shadow: 0 0 5px rgb(0, 81, 255) ;
+}
+
+input[type='email']:invalid{
+  border-color: rgb(250, 0, 0);
+  
+}
+
+input[type='password']:invalid:focus{
+  border-color: red;
+}
