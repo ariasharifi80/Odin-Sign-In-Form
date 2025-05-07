@@ -37,28 +37,44 @@
         <form>
           <h1>Let's Do This</h1>
           <div class="form-row">
-            <label for="Fname">First Name:</label>
-            <input type="text" name="name" id="Fname" placeholder="Your First Name">
-
-            <label for="mail">Email : <span aria-label="required">*</span></label>
-            <input type="email" name="email" id="mail" placeholder="Your Email Address" required>
-            <label for="password">password: <span aria-label="required">*</span></label>
-            <input type="password" name="password" id="password" required minlength="6">
-           
-           </div>
-           <div  class="form-row">
-            <label for="Lname">Last Name:</label>
-            <input type="text" name="name" id="Lname" placeholder="Your Last Name">
-             
-            <label for="phone">Phone Number:</label>
-            <input type="tel" name="phone" id="phone" pattern="^09\d{9}$" placeholder="Your phone number">
-
-            <label for="passconfirm">Confirm Password: <span aria-label="required">*</span></label>
-            <input type="password" name="confirm" id="passconfirm" required oninput="this.setCustomValidity(this.value !== password.value ? 'Passwords do not match' : '')">
+            <div class="input-group">
+              <label for="Fname">First Name:</label>
+              <input type="text" name="name" id="Fname" placeholder="Your First Name">
+            </div>
+            <div class="input-group">
+              <label for="Lname">Last Name:</label>
+              <input type="text" name="name" id="Lname" placeholder="Your Last Name">
+            </div>
           </div>
+          
+          <div class="form-row">
+            <div class="input-group">
+              <label for="mail">Email:</label>
+              <input type="email" name="email" id="mail" placeholder="Your Email Address" required>
+            </div>
+            <div class="input-group">
+              <label for="phone">Phone Number:</label>
+              <input type="tel" name="phone" id="phone" pattern="^09\d{9}$" placeholder="Your phone number">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="input-group">
+              <label for="password">Password:</label>
+              <input type="password" name="password" id="password" required minlength="6">
+            </div>
+            <div class="input-group">
+              <label for="passconfirm">Confirm Password:</label>
+              <input type="password" name="confirm" id="passconfirm" required>
+            </div>
+          </div>
+          
+          
 
            
-            
+            <div class="btn">
+              <button type="submit" id="create-btn">Create Account</button>
+            </div>
           
         </form>
       </section>
